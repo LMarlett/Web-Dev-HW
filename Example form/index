@@ -1,0 +1,157 @@
+<!---Doctype HTML--->
+<html>
+<!---Lillian Jimenez--->
+<title>Example Form</title>
+
+<head>
+<script>
+
+function ValidateForm(sampleForm)
+{
+	if(document.forms.sampleForm.fname.value=="")
+	{
+	alert("Please enter your first name.");
+	document.forms.sampleForm.fname.focus();
+	return false;
+	}
+
+	if(document.forms.sampleForm.lname.value=="")
+	{
+	alert("Please enter your last name.");
+	document.forms.sampleForm.lname.focus();
+	return false;
+	}	
+
+	if(document.forms.sampleForm.email.value=="")
+	{
+	alert("Please enter your email.");
+	document.forms.sampleForm.email.focus();
+	return false;
+	}
+
+	if(document.forms.sampleForm.gender[0].checked== false) &&
+	  (document.forms.sampleForm.gender[1].checked== false)
+	{
+	alert("Please enter your gender, Male or Female");
+	return false;
+	}
+
+	if(document.forms.sampleForm.interest[0].checked== false) &&
+	  (document.forms.sampleForm.interest[1].checked== false) &&
+	  (document.forms.sampleForm.interest[2].checked== false) &&
+	  (document.forms.sampleForm.interest[3].checked== false) &&
+	  (document.forms.sampleForm.interest[4].checked== false)
+	{
+	alert("Please choose an interest");
+	return false;
+	}
+
+	if(document.forms.sampleForm.college.value== "select")
+	
+	{
+	alert("Please select a college from the list.");
+	return false;
+	}
+
+function doClear()
+{
+		document.forms.sampleForm.fname.value=="";
+		document.forms.sampleForm.lname.value=="";
+		document.forms.sampleForm.email.value=="";
+		
+		document.forms.sampleForm.gender[0].checked== false;
+	  	document.forms.sampleForm.gender[1].checked== false;
+		
+		document.forms.sampleForm.interest[0].checked== false;
+	  	document.forms.sampleForm.interest[1].checked== false;
+	  	document.forms.sampleForm.interest[2].checked== false;		
+	  	document.forms.sampleForm.interest[3].checked== false;
+	  	document.forms.sampleForm.interest[4].checked== false;
+
+
+		document.forms.sampleForm.college[2].checked== false;
+	  	document.forms.sampleForm.college[3].checked== false;
+	  	document.forms.sampleForm.college[4].checked== false;		
+	  	document.forms.sampleForm.college[5].checked== false;
+
+}
+
+</script>
+</head>
+
+<body>
+<form name="sampleForm" action="" method="post">
+ 	<h1> Example Form </h1>
+
+	<fieldset>
+		<legend> Personal Information </legend>
+		First Name: <input type="text" name="fname"/> <br/><br/>
+		Last Name: <input type="text" name="lname"/> <br/><br/>
+		Email: <input type="text" name="email"/> <br/><br/>
+		Gender: <input type="radio" name="gender" value="Male"/> <br/>
+		&emsp; &emsp; &nbsp; &nbsp; 
+			<input type="radio" name="gender" value="Female"/> <br/>
+	</fielset>
+
+	<fieldset>
+		<legend>Interests</legend>
+		<input type= "checkbox" name = "interest" values = "Programming"/> Programming <br>
+		<input type= "checkbox" name = "interest" values = "Graphic Design"/> Graphic Design <br>
+		<input type= "checkbox" name = "interest" values = "Page Layout"/> Page Layout <br>
+		<input type= "checkbox" name = "interest" values = "Technical Writing"/> Technical Writing <br><br><br>
+
+	College:<br><select name="college">
+		<option value="select"> Select </option>
+		<option value="architecture"> Architecture </option>
+		<option value="technical"> Tehnical </option>
+		<option value="arts"> Arts </option>
+		<option value="nursing"> Nursing </option>
+		</select><br><br>
+	</fieldset>
+
+	<input type="submit" name="submit" value="Submit Form"
+	onClick="ValidateForm(sampleForm)">
+	<input type="reset" name"reset" value="Reset Form"
+	onClick="doCLear()">
+	
+</form>
+</body>
+</html> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
